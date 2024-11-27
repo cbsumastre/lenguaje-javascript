@@ -152,37 +152,37 @@ console.log(isBookRead(books, "Los Pilares de la Tierra"));// false
 
 class SlotMachine {
     constructor() {
-        this._init();
+        this.#init();
     }
 
-    _init() {
+    #init() {
         this.coinCounter = 0;
         this.roulette1 = false;
         this.roulette2 = false;
         this.roulette3 = false;
     }
 
-    _randomBoolean() {
+    #randomBoolean() {
         return Math.random() >= 0.5;
     }
 
     play() {
         this.coinCounter++;
-        this.roulette1 = this._randomBoolean();
-        this.roulette2 = this._randomBoolean();
-        this.roulette3 = this._randomBoolean();
+        this.roulette1 = this.#randomBoolean();
+        this.roulette2 = this.#randomBoolean();
+        this.roulette3 = this.#randomBoolean();
         if (this.roulette1 && this.roulette2 && this.roulette3) {
             console.log(`Congratulations!!!. You won ${this.coinCounter} coins!!`);
-            this._init();
+            this.#init();
         } else {
             console.log("Good luck next time!!");
         }
     }
 }
 
-const machine=new SlotMachine();
+const machine = new SlotMachine();
 
-for (let i=0;i<10;i++) {
+for (let i = 0; i < 10; i++) {
     machine.play()
 }
 
