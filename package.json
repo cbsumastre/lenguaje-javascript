@@ -1,0 +1,17 @@
+{
+  "name": "laboratorio-javascript",
+  "version": "1.0.0",
+  "main": "01-arrays.js",
+  "scripts": {
+    "ejercicio1": "node 01-arrays.js",
+    "ejercicio2": "node 02-concat.js",
+    "ejercicio3": "node 03-clone-merge.js",
+    "ejercicio4": "node 04-read-books.js",
+    "ejercicio4-ts": "npx tsx 04-read-books.ts",
+    "ejercicio5": "node 05-slot-machine.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
