@@ -1,8 +1,4 @@
-/**
-* Opcional
-* Utiliza Typescript para añadir los tipos adecuados.
-*/
-
+console.log("************** DELIVERABLE 04 *********************");
 interface Book {
     title: string;
     isRead: boolean;
@@ -18,6 +14,6 @@ const books: Book[] = [
     { title: "Devastación", isRead: true },
 ];
 
-console.log(isBookRead(books, "Devastación")); // true
-console.log(isBookRead(books, "Canción de hielo y fuego")); // false
-console.log(isBookRead(books, "Los Pilares de la Tierra")); // false
+console.log("Devastación - leído:", isBookRead(books, "Devastación")); // true
+console.log("Canción de hielo y fuego - leído: ", isBookRead(books, "Canción de hielo y fuego")); // false
+console.log("Los Pilares de la Tierra - leído:", isBookRead(books, "Los Pilares de la Tierra")); // false

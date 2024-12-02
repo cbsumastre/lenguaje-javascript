@@ -1,17 +1,43 @@
 {
-  "name": "laboratorio-javascript",
+  "name": "playground-deliverable-exercises",
   "version": "1.0.0",
-  "main": "01-arrays.js",
-  "scripts": {
-    "ejercicio1": "node 01-arrays.js",
-    "ejercicio2": "node 02-concat.js",
-    "ejercicio3": "node 03-clone-merge.js",
-    "ejercicio4": "node 04-read-books.js",
-    "ejercicio4-ts": "npx tsx 04-read-books.ts",
-    "ejercicio5": "node 05-slot-machine.js"
+  "description": "Master frontend Lemoncode, playground for deliverable exercises",
+  "keywords": [
+    "lemoncode",
+    "master",
+    "javascript",
+    "typescript"
+  ],
+  "homepage": "https://github.com/Lemoncode/master-frontend-lemoncode/tree/master/02-languages",
+  "bugs": {
+    "url": "https://github.com/Lemoncode/master-frontend-lemoncode/issues"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT",
+  "author": "Lemoncode",
+  "contributors": [
+    "Javier Calzado <javi.calzado@lemoncode.net> (https://github.com/fjcalzado)",
+    "Santiago Camargo <santi.camargo@lemoncode.net> (https://github.com/crsanti)",
+    "Antonio Contreras <antonio.contreras@lemoncode.net> (https://github.com/antonio06)"
+  ],
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemoncode/master-frontend-lemoncode.git"
+  },
+  "scripts": {
+    "prestart": "npm run transpile && npm run copy",
+    "start": "concurrently \"npm:transpile -- -w\" npm:devserver",
+    "copy": "copyfiles --flat src/**/*.{html,css} transpiled",
+    "transpile": "tsc",
+    "devserver": "browser-sync start -c bs-config.json"
+  },
+  "dependencies": {
+    "browser-sync": "^3.0.2"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "concurrently": "latest",
+    "copyfiles": "^2.x",
+    "typescript": "latest"
+  }
 }

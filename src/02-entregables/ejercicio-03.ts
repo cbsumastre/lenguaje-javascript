@@ -1,8 +1,12 @@
+console.log("************** DELIVERABLE 03 *********************");
+
 const user = {
     id: 1,
     name: 'Carlos',
     roles: ['ADMIN', 'SUPERVISOR']
 }
+
+console.log("User ", user);
 
 
 /**
@@ -14,9 +18,9 @@ function clone(source) {
 }
 
 const newUser = clone(user);
-console.log(newUser);
+console.log("newUser", newUser);
 newUser.age = 48;
-console.log(newUser, user);
+console.log(newUser, user, "User no ha cambiado, se mantiene inmutable");
 
 
 /**
@@ -27,11 +31,13 @@ console.log(newUser, user);
 const a = { name: "Maria", surname: "Ibañez", country: "SPA" };
 const b = { name: "Luisa", age: 31, married: true };
 
+console.log(a, b);
+
 function merge(source, target) {
     return {
-        ...target,
-        ...source
-    }    
-  }
+        ...clone(target),
+        ...clone(source)
+    }
+}
 
-console.log(merge(a, b)); // {name: "Maria", age: 31, married: true, surname: "Ibañez", country: "SPA"}
+console.log("Merge", merge(a, b)); // {name: "Maria", age: 31, married: true, surname: "Ibañez", country: "SPA"}
