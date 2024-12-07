@@ -11,7 +11,7 @@ const myObject = {
     }
   };
   
-  const deepGet = () => {};
+  const deepGet = (object, ...props) => {};
   
   console.log(deepGet(myObject, "x")); // undefined
   console.log(deepGet(myObject, "a")); // 1
