@@ -13,9 +13,9 @@ const myObject = {
   
   const deepGet = () => {};
   
-  console.log(deepGet2(myObject2, "x")); // undefined
-  console.log(deepGet2(myObject2, "a")); // 1
-  console.log(deepGet2(myObject2, "b")); // { c: null, d: {....}}
-  console.log(deepGet2(myObject2, "b", "c")); // null
-  console.log(deepGet2(myObject2, "b", "d", "f", "g")); // bingo
-  console.log(deepGet2(myObject2));  // {a: 1, b: {...}}
+  console.log(deepGet(myObject, "x")); // undefined
+  console.log(deepGet(myObject, "a")); // 1
+  console.log(deepGet(myObject, "b")); // { c: null, d: {....}}
+  console.log(deepGet(myObject, "b", "c")); // null
+  console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
+  console.log(deepGet(myObject));  // {a: 1, b: {...}}
