@@ -3,7 +3,7 @@ const expensiveFunction = () => {
     return 3.1415;
   }
   
-  const memoize = (fn) => { };
+  const memoize = (fn:Function):Function => { };
   
   const memoized = memoize(expensiveFunction);
   console.log(memoized()); // Una única llamada // 3.1415
