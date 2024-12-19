@@ -1,4 +1,4 @@
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const showMessage = async ([time, message]) => {
     await delay(time);
@@ -11,11 +11,10 @@ const triggers = [
 ];
 
 const run = async (triggers: Function[]) => {
-    triggers.forEach(async (t, i) => {
-        await delay(i === 0 ? 0 : 150);
-        t();
-    })
-    await delay(500);
+    // triggers.forEach(async (trigger)=>await trigger()) <--No garantia que se ejecute en el orden esperado
+    for (const trigger of triggers) {
+        await trigger();
+    }
     console.log("first");
 };
 
